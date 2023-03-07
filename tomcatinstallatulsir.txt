@@ -1,0 +1,86 @@
+[ec2-user@ip-172-31-37-34 ~]$ sudo yum update
+
+[ec2-user@ip-172-31-37-34 ~]$ yum install java-1.8*
+
+[ec2-user@ip-172-31-37-34 ~]$ sudo su
+       OR
+[ec2-user@ip-172-31-37-34 ~]$ sudo su -
+[root@ip-172-31-37-34 ~]# cd /
+[root@ip-172-31-37-34 /]# cd /opt
+
+[root@ip-172-31-37-34 opt]# wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+[root@ip-172-31-37-34 opt]# tar -zvxf apache-tomcat-9.0.68.tar.gz 
+
+
+
+
+[root@ip-172-31-37-34 opt]# cd apache-tomcat-9.0.68/
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd bin
+[root@ip-172-31-37-34 bin]# chmod +x startup.sh
+[root@ip-172-31-37-34 bin]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd conf
+[root@ip-172-31-37-34 conf]# nano server.xml
+[root@ip-172-31-37-34 conf]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd bin
+[root@ip-172-31-37-34 bin]# ./startup.sh
+    
+                           #Tomcat started.
+
+[ec2-user@ip-172-31-37-34 ~]$ cd /
+[ec2-user@ip-172-31-37-34 /]$ cd opt
+[ec2-user@ip-172-31-37-34 opt]$ cd apache-tomcat-9.0.68/
+[ec2-user@ip-172-31-37-34 apache-tomcat-9.0.68]$ sudo su
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd webapps/
+
+[root@ip-172-31-37-34 webapps]# mkdir cdac
+[root@ip-172-31-37-34 webapps]# cd cdac
+[root@ip-172-31-37-34 cdac]# nano hello.jsp
+[root@ip-172-31-37-34 cdac]# mkdir WEB-INF
+[root@ip-172-31-37-34 cdac]# cd WEB-INF/
+[root@ip-172-31-37-34 WEB-INF]# nano web.xml
+[root@ip-172-31-37-34 WEB-INF]# cd ..
+[root@ip-172-31-37-34 cdac]# cd ..
+[root@ip-172-31-37-34 webapps]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd bin
+[root@ip-172-31-37-34 bin]# ./startup.sh
+[root@ip-172-31-37-34 bin]# ./restartup.sh
+
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd webapps/
+[root@ip-172-31-37-34 webapps]# cd cdac/
+[root@ip-172-31-37-34 cdac]# vim hello.jsp 
+[root@ip-172-31-37-34 cdac]# cd WEB-INF/
+[root@ip-172-31-37-34 WEB-INF]# ls
+web.xml
+[root@ip-172-31-37-34 WEB-INF]# vi web.xml 
+[root@ip-172-31-37-34 WEB-INF]# cd ..
+[root@ip-172-31-37-34 cdac]# vi max.html
+[root@ip-172-31-37-34 cdac]# cat max.html 
+
+<html>
+<head>
+<title> find maximum number</title>
+</head>
+<body>
+<form action="max.jsp" method="get">
+<h1> find maximum of two number </h1>
+<br /> <br />
+Enter the First number:
+<input type="text" id="num1" name="num2">
+Enter second number:
+<input type="text" id="num2" name="num2"
+<br /> <br />
+<input type="submit" title="find max">
+</form>
+</body>
+</html>
+
+[root@ip-172-31-37-34 cdac]# vi max.jsp
+[root@ip-172-31-37-34 cdac]# vi max.html 
+
+[root@ip-172-31-37-34 cdac]# vi max.jsp 
+[root@ip-172-31-37-34 cdac]# vi max.html 
+[root@ip-172-31-37-34 cdac]# vi max.jsp 
+[root@ip-172-31-37-34 cdac]# vi max.html 
+[root@ip-172-31-37-34 cdac]# vi max.html 
+[root@ip-172-31-37-34 cdac]# vi max.jsp 
+

@@ -1,0 +1,83 @@
+[ec2-user@ip-172-31-37-34 ~]$ sudo yum update
+
+[ec2-user@ip-172-31-37-34 ~]$ yum install java-1.8*
+
+[ec2-user@ip-172-31-37-34 ~]$ sudo su
+       OR
+[ec2-user@ip-172-31-37-34 ~]$ sudo su -
+[root@ip-172-31-37-34 ~]# cd /
+[root@ip-172-31-37-34 /]# cd /opt
+
+[root@ip-172-31-37-34 opt]# wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+[root@ip-172-31-37-34 opt]# tar -zvxf apache-tomcat-9.0.68.tar.gz 
+
+
+
+
+[root@ip-172-31-37-34 opt]# cd apache-tomcat-9.0.68/
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd bin
+[root@ip-172-31-37-34 bin]# chmod +x startup.sh
+[root@ip-172-31-37-34 bin]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd conf
+[root@ip-172-31-37-34 conf]# nano server.xml
+[root@ip-172-31-37-34 conf]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd bin
+[root@ip-172-31-37-34 bin]# ./startup.sh
+    
+                           #Tomcat started.
+
+[ec2-user@ip-172-31-37-34 ~]$ cd /
+[ec2-user@ip-172-31-37-34 /]$ cd opt
+[ec2-user@ip-172-31-37-34 opt]$ cd apache-tomcat-9.0.68/
+[ec2-user@ip-172-31-37-34 apache-tomcat-9.0.68]$ sudo su
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd webapps/
+[root@ip-172-31-37-34 webapps]# cd ROOT/
+[root@ip-172-31-37-34 root]# cd ..
+
+[root@ip-172-31-37-34 webapps]# mkdir web1
+[root@ip-172-31-37-34 webapps]# mkdir web2
+
+[root@ip-172-31-37-34 webapps]# cd web1
+
+[root@ip-172-31-37-34 web1]# nano index.html
+
+                              "welcome my site1"
+                              save file
+
+[root@ip-172-31-37-34 webapps]# cd ../web2/
+
+[root@ip-172-31-37-34 web2]# nano index.html
+
+                              "welcome my site2"
+                              save file
+
+[root@ip-172-31-37-34 web2]# cd..
+[root@ip-172-31-37-34 webapps]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd conf/
+[root@ip-172-31-37-34 conf]# nano server.xml
+                             
+                           <Host name="localhost" appbase="webapp"
+                                 unpackWARs=="true" autoDeploy="true">  :: copy file and pest after <hosts/> ::
+
+                   --------------------------------------------------------------------------------------------------------
+                                  EG:-
+                   --------------------------------------------------------------------------------------------------------
+                             <hosts/>
+                             <Host name="localhost" appbase="webapp/web1"
+                                 unpackWARs=="true" autoDeploy="true">
+                             </Host>
+                             <Host name="localhost" appbase="webapp/web1"
+                                 unpackWARs=="true" autoDeploy="true">
+                             </Host>
+                             </hosts>
+                       </engine>
+                    </service>
+                  </server>
+                 ---------------------------------------------------------------------------------------------------------
+                         Save file & Exit
+                 ----------------------------------------------------------------------------------------------------------
+[root@ip-172-31-37-34 conf]# cd ../bin/
+[root@ip-172-31-37-34 bin]# ./startup.sh
+
+
+

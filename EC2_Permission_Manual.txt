@@ -1,0 +1,11 @@
+---------------------------------------
+Permission Manual Json
+---------------------------------------
+
+eg:-
+   {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": "ec2:*",
+      "Resource": "*"
+   }  

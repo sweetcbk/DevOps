@@ -1,0 +1,95 @@
+------------------------------------
+Install Heroku Windows Application
+------------------------------------
+
+C:\Users\hpcsa> heroku login
+ 
+  Open Browser & Login
+
+--------------------------------------
+
+Create a Folder on local Drive E
+
+---------------------------------------
+ Install Git on base Machine
+---------------------------------------
+
+Download Git & Install
+
+Add--> gitbash 
+Add--> additional icon
+Select--> Notepad
+Select--> Default
+Select--> Use Git from git bash
+Select--> use the open ssl
+Select--> checkout commit
+Select--> default
+Select--> none
+Select--> enable external
+
+----------------------------------------
+Open Git Bash Terminal & run commands
+----------------------------------------
+
+hpcsa@hpcsa MINGW64 ~ cd E:
+hpcsa@hpcsa MINGW64 ~ pwd
+hpcsa@hpcsa MINGW64 ~ cd folder
+
+hpcsa@hpcsa MINGW64 ~ git init
+hpcsa@hpcsa MINGW64 ~ herocu git:remote -a demohpcsa-lab01
+
+------------------------------------------------------------
+create html file in folder
+eg:- E:/folder/index.html
+
+create php file in folder
+     <?php include("index.html"); ?> & save
+eg:- E:/folder/index.php
+
+create json file in folder
+     {} & save
+eg:- E:/folder/index.json
+
+------------------------------------------------------------
+hpcsa@hpcsa MINGW64 ~ git add.
+hpcsa@hpcsa MINGW64 ~ git commit -am "make it better"
+hpcsa@hpcsa MINGW64 ~ git push heroku master
+
+---------------------------------------------------------------
+Configure Github Account
+git config --global user.email "sweetcbk@gmail.com"
+---------------------------------------------------------------
+
+Go to--> Heroku Repo & click on Applicatin
+
+
+
+
+-------------------------------------------------------------
+herocu command
+--------------------------------------------------------------
+
+
+Install the Heroku CLI
+Download and install the Heroku CLI.
+
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+$ heroku login
+Create a new Git repository
+Initialize a git repository in a new or existing directory
+
+$ cd my-project/
+$ git init
+$ heroku git:remote -a my-chandra
+Deploy your application
+Commit your code to the repository and deploy it to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+You can now change your main deploy branch from "master" to "main" for both manual and automatic deploys, please follow the instructions here.
+Existing Git repository
+For existing repositories, simply add the heroku remote
+
+$ heroku git:remote -a my-chandra

@@ -1,0 +1,40 @@
+------------------------------------------------------------------
+              [User] Create a User
+------------------------------------------------------------------
+
+1.  Click on--> Add User
+2.  [user name]--> Enter User Name
+3.  [Add Another User--> Enter User Name (Multiple User)
+4.  [Select AWS access type]--> Allow Key
+5.  [Select AWS access type]--> Allow Password
+6.  [Console password]--> Choose Custom Passsword
+7.  [Console password]--> Enter Your Password
+8.  Click On--> Next Permission
+9.  Click On--> Next Tab
+10. [Add Tag]--> Add tags (optional)
+11. Click On--> Next Review
+12. Click On--> Create User
+13. Click On--> Download .csv (in this file id & password)
+14. Click On--> Close 
+15. Open Web Browser--> Login User & Check Permissons (No permission)
+
+----------------------------------------------------------------------
+            [Group] Create a Group
+----------------------------------------------------------------------
+
+1.  Click on--> User Group
+2.  Click on--> Create Group
+3.  [User group]--> Enter Group Name
+4.  [Add users]--> Select User 
+5.  [Attach permissions policies]--> search AdministratorAccess & select
+6.  Click on--> Create Group
+7.  Click on--> Permissions
+8.  Click on--> Policy Name
+9.  Click on--> {} JSON
+10. Open Web Browser--> Re-Login User & Check Permissons (Full Permission)
+
+
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+

@@ -1,0 +1,44 @@
+Login on AWS Cloud
+https://console.aws.amazon.com/
+
+Go to Services
+
+Select -> Compute
+Select -> EC2 (vertual service in the cloud)
+
+           OR
+serch EC2 in search box and select 
+
+Select -> instances 
+Select -> Launch instances
+    1.[name and tag]--> Enter your instance name
+    2.[Application and OS Images]--> Instance type (choose Free tier eligible)
+    3.[Quick Start]--> Choose Operating Sysytem ISO
+    4.[Key pair (login)]--> Create new key pair 
+            1.[Key pair (login)]--> Enter Key pair name 
+            2.[Key pair type] --> RSA
+            3.[Private key file format] -->> .pem (For use with OpenSSH)-(Linux MACHINE)
+            4.[Private key file format] -->> .ppk (For use with PuTTY)-(WINDOWS MACHINE)
+            5. Click key pair
+    5.[Network settings]--> Select- Create security group
+    6.[Network settings]--> Allow SSH traffic from (Anyware)
+    7.[Network settings]--> Allow HTTP traffic from the internet
+    8.[Configure storage]--> Select Storage in GB (free maximum storage 30 gb)
+    9. Click on--> Launch Instance
+    10. Click on--> View all Instance
+    11. [View]--> Verify Instance (Running)
+    12. Click on--> Select Your Instance
+    13. Click on--> Instance ID (eg:-i-046a89479ce740520)
+    14. Click on--> RDP Client
+    15. Click on--> Download Remote Desktop file
+    16. Click on--> Download Remote Desktop file
+    17. Click on--> Get Password
+    18. Click on--> Upload RDP key File
+    19. Click on--> Copy Password
+    20. Click on--> connect 
+   
+
+    
+    19. Go to --> Instance state 
+    20. Click Stop instance 
+    21. Click Terminate instance

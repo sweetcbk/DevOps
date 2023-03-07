@@ -1,0 +1,63 @@
+[ec2-user@ip-172-31-37-34 ~]$ sudo su
+       OR
+[ec2-user@ip-172-31-37-34 ~]$ sudo su -
+
+[root@ip-172-31-37-34 ~]# cd /
+[root@ip-172-31-37-34 /]# cd /opt
+[root@ip-172-31-37-34 opt]# wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+[root@ip-172-31-37-34 opt]# tar -zvxf apache-tomcat-9.0.68.tar.gz 
+[root@ip-172-31-37-34 opt]# cd apache-tomcat-9.0.68/
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd bin
+[root@ip-172-31-37-34 bin]# chmod +x startup.sh
+[root@ip-172-31-37-34 bin]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd conf
+[root@ip-172-31-37-34 conf]# nano server.xml
+                             
+                              Edit page Default port number 8080 to 80 and save with ctrl+x and press y to save chages
+
+[root@ip-172-31-37-34 conf]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd bin
+[root@ip-172-31-37-34 bin]# ./startup.sh
+[root@ip-172-31-37-34 bin]# cd ..
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]#
+[root@ip-172-31-37-34 apache-tomcat-9.0.68]# cd webapps/
+[root@ip-172-31-37-34 webapps]# mkdir cdac
+[root@ip-172-31-37-34 webapps]# cd cdac
+[root@ip-172-31-37-34 cdac]# 
+
+----------------------------------------------------------------------------------------------------------------
+  
+                  Second step for website or custom webpage upload on cloud 
+                  Open web Browser and continew with process 
+
+Go to Mediafire Cloud website & sign up with ur email id 
+
+Mediafire signup link:- https://www.mediafire.com/upgrade/registration.php?pid=free
+Login Mediafire acount:- https://www.mediafire.com/login/
+[mediafire Dashboard]--> Select My file 
+[mediafire Dashboard]--> Click on Upload Button
+[mediafire Dashboard]--> Select your .zip fire or webpage file 
+[mediafire Dashboard]--> Click on Being Upload
+[mediafire Dashboard]--> Click on Share
+[mediafire Dashboard]--> copy share link
+                         eg:- https://www.mediafire.com/file/308zzcspf6hprxs/tomcat_install_atulsir.html/file
+                        
+                        Remove end of link /file from url
+                          eg:- https://www.mediafire.com/file/308zzcspf6hprxs/tomcat_install_atulsir.html
+
+-------------------------------------------------------------------------------------------------------------------
+                     move on your SSH Terminal
+           
+for single webpage 
+
+[root@ip-172-31-37-34 cdac]# wget https://www.mediafire.com/file/308zzcspf6hprxs/tomcat_install_atulsir.html
+
+for Complete Website .Zip
+
+[root@ip-172-31-37-34 cdac]# wget https://www.mediafire.com/file/308zzcspf6hprxs/tomcat_install_atulsir.zip
+[root@ip-172-31-37-34 cdac]# unzip tomcat_install_atulsir.zip
+
+All done 
+
+open your web browser 
+serch ur url  [eg:- 11.22.33/cdac/tomcat_install_atulsir.html]

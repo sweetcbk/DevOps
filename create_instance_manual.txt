@@ -1,0 +1,54 @@
+Login on AWS Cloud
+https://console.aws.amazon.com/
+
+Go to Services
+
+Select -> Compute
+Select -> EC2 (vertual service in the cloud)
+
+           OR
+serch EC2 in search box and select 
+
+Select -> instances 
+Select -> Launch instances
+    1.[name and tag]--> Enter your instance name
+    2.[Application and OS Images]--> Instance type (choose Free tier eligible)
+    3.[Quick Start]--> Choose Operating Sysytem ISO
+    4.[Key pair (login)]--> Create new key pair 
+            1.[Key pair (login)]--> Enter Key pair name 
+            2.[Key pair type] --> RSA
+            3.[Private key file format] -->> .pem (For use with OpenSSH)-(Linux MACHINE)
+            4.[Private key file format] -->> .ppk (For use with PuTTY)-(WINDOWS MACHINE)
+            5. Click key pair
+    5.[Network settings]--> Select- Create security group
+    6.[Network settings]--> Allow SSH traffic from (Anyware)
+    7.[Network settings]--> Allow HTTP traffic from the internet
+    8.[Configure storage]--> Select Storage in GB (free maximum storage 30 gb)
+    9. Click Launch Instance
+    10. Click View all Instance
+    11. Verify Instance (Running)
+    12. Select Your Instance
+    13. Click on Instance ID (eg:-i-046a89479ce740520)
+       
+          FOR SSH client Terminal Connection
+
+    14. Go to [Public IPv4 DNS]
+    15. Copy your Public ipv4 DNS 
+        (eg:-ec2-3-111-197-225.ap-south-1.compute.amazonaws.com)
+        
+        Open an SSH client.
+
+    16. ote your private key file. The key used to launch this instance is cbk.pem
+
+    17. Run this command, if necessary, to ensure your key is not publicly viewable.
+         chmod 400 cbk.pem
+
+    18. Connect  our instance using its Public DNS:
+         ec2-3-111-197-225.ap-south-1.compute.amazonaws.com
+
+         Example:
+
+         ssh -i "cbk.pem" ec2-user@ec2-3-111-197-225.ap-south-1.compute.amazonaws.com
+    19. Go to --> Instance state 
+    20. Click Stop instance 
+    21. Click Terminate instance

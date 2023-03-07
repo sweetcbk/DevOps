@@ -1,0 +1,34 @@
+----------------------------------------------------------------------------
+           Tomcat       SSL/TCL
+----------------------------------------------------------------------------
+
+
+
+------------------------------------------------------
+create public & private key for secure website (https)
+------------------------------------------------------
+
+[root@ip-172-31-33-230 ~]# keytool -genkey -alias tomcat -keyalg RSA
+
+
+---------------------------------
+Store Public key on the sysytem
+---------------------------------
+
+[root@ip-172-31-33-230 ~]# keytool -exportcert -file /etc/cloudcert.p12 -alias tomcat
+
+
+----------------------------------
+import certificate file in browser
+----------------------------------
+
+Go to--> Browser
+Go to--> Setting
+Go to--> Security
+Go to--> Manage device certificates
+Go to--> Import certificate
+
+
+--------------------------------------
+
+--------------------------------------

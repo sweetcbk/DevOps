@@ -1,0 +1,46 @@
+---------------------------------------------------------------------
+                 Open Stack INstall Process
+---------------------------------------------------------------------
+
+   *** Install RDO Repositry ***
+ 
+   Open Terminal & run given commands
+----------------------------------------------------------------------
+
+[root@star-node1 ~]$ sudo su
+[root@star-node1 ~]# yum update
+[root@star-node1 ~]# yum install -y https://rdoproject.org/repos/rdo-release.rpm
+[root@star-node1 ~]# ls -ll /etc/yum.repos.d/
+ 
+   *** Install Openstack Packstack ***
+
+[root@star-node1 ~]# yum install -y openstack-packstack
+
+[root@star-node1 ~]# packstack --gen-answer-file=/root/myfile.txt
+[root@star-node1 ~]# ls -ll /root/
+[root@star-node1 ~]# nano myfile.txt
+[root@star-node1 ~]# Edit Password 
+
+                     (CONFIG_KEYSTONE_ADMIN_PW=b6f8a8bcbc464071)
+                           After change
+                     (CONFIG_KEYSTONE_ADMIN_PW=root)
+                     ---------------------------------------------------------------
+                        or Go to Line NUmber:- 326
+                     ---------------------------------------------------------------
+                     eg :- # 'admin'.
+		           CONFIG_KEYSTONE_ADMIN_USERNAME=admin
+                           # Password to use for the Identity service 'admin' user.
+			   CONFIG_KEYSTONE_ADMIN_PW=b6f8a8bcbc464071
+                     ----------------------------------------------------------------
+
+[root@star-node1 ~]# Save file (ctrl+x & press y)
+
+----------------------------------------------------------------------------------
+          if face any issue then run command
+
+[root@star-node1 ~]# setenforce 0
+[root@star-node1 ~]# sysytemctl disable firewall.d
+
+-----------------------------------------------------------------------------------
+[root@star-node1 ~]# packstack --answer-file=/root/myfile.txt
+

@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+ Install Tomcat on Windows EC2
+-------------------------------------------------------------------------------
+
+Open cmd and check java version 
+
+C:\Users\Administrator>--> java -version
+
+Open Web Browser & Download Java & Install
+   
+    Conf:-   x64 Installer	158.91 MB	
+    link:-   https://download.oracle.com/java/19/latest/jdk-19_windo
+
+------------------------------------------------------------------------------ 
+    If java not show on cmd promt
+-------------------------------------------------------------------------------
+Serach environment on Machine EC3 instance 
+Select Invironmet variable
+Click on--> sysytem variable path select 
+Click on--> Edit 
+Click on--> Add new 
+
+            copy jana path & pest in box
+
+Java Path--> C:\Program Files\Java\jdk-19\bin
+ 
+             and pest and click on ok done 
+----------------------------------------------------------------------------------
+  Download Tomcat & Install
+----------------------------------------------------------------------------------
+Open Web Browser & Download Tomcat & Install
+
+Conf:- 32-bit/64-bit Windows Service Installer (pgp, sha512)
+Link:- https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.69/bin/apache-tomcat-9.0.69.exe
+
+Select--> Option Full Install type 
+
+Enter user name :-     cdac
+Enter user password:-  cbk@123
+ 
+Install & Finish
+
+Open Web Browser 
+open url--> http://localhost:8080/
+Click on--> Manager and Login 
+Enter user id      :-  cdac
+Enter user password:-  cdac@123

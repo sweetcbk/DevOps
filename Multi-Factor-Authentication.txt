@@ -1,0 +1,49 @@
+=========================================================================
+      Multi-Factor-Authentication
+=========================================================================
+
+------------------------------------------
+1. Download Authy Software or Application
+------------------------------------------
+
+ Android link:- https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2
+                   
+                      or
+
+ Android link:- https://play.google.com/store/apps/details?id=com.authy.authy
+
+
+ Windows Link1:- https://authy.com/download/
+                   
+                      or
+
+ Windows Link2:- https://pkg.authy.com/authy/stable/2.2.1/win32/x64/Authy%20Desktop%20Setup%202.2.1.exe
+
+----------------------------------
+2. Create a Authy Account & Login
+----------------------------------
+
+------------------------------
+3. Create a IMA User
+------------------------------
+
+ Login as Root User
+ ------------------
+
+ Go to--> IMA
+ Click on--> Users
+ Click on--> Username
+ Click on--> Security Credentials
+ Click on--> Assign MFA device
+ Name--> Enter mfa name
+ Select--> Virtual MFA device
+ Click on--> Continue
+ Choose--> Option 2
+           Scan QR Code & login with Authy Application
+ Add MFA--> Add MFA1 key
+ Add MFA--> Add MFA2 key
+ Click on--> Save
+
+-------------------------------------
+4. Login your IMA Account via MFA OTP
+-------------------------------------

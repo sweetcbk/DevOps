@@ -1,0 +1,78 @@
+-----------------------------------------------------------------------------
+        IAM (Identity and Access Management)
+-----------------------------------------------------------------------------
+          Custom mode
+-----------------------------------------------------------------------------
+  
+    Search IMA in Search Box
+     
+             or
+
+1. Click on--> Services
+2. Go to--> Security, Identity, & Compliance
+3. Click on--> IAM
+4. Click on--> Users
+5. Click on-->  Adds User
+   Click on-->  Adds Another User (for multiple user add)
+6. [Set user details]-->  Enter User Name
+7. [Select AWS access type]--> Enable Access key 
+                           --> Enable Password
+
+8.  [Console password]--> Choose Custom Password
+9.  [Console password]--> Enter Custom Password
+10. Click on --> Next Permission
+11. Click on --> Attach Existing Policies
+12. Select--> Administrator Policies
+13. Click on--> Next Tag
+14. [Add Tags]--> Add tags (optional)
+15. Click on--> Next Review
+16. Click on--> Create User
+17. Click on--> Security credentionals
+18. Click on--> Copy Signin Credentials
+              eg:- https://533713933586.signin.aws.amazon.com/console
+
+19. Open Link in Web Browser & Open URL
+20. Enter--> IMA User Name 
+20. Enter--> IMA User password
+20. Click on--> Login
+21. Enter--> Change IMA Password
+22. Login--> IMA User
+
+
+---------------------------------------------------------------------------
+    
+ Serch IAM and Select your Bucket
+
+1.  Click on--> Create policy
+2.  Click on--> Choose Service
+3.  Search--> S3 and Enter
+4.  Click on--> Action
+5.  Select--> List
+6.  Select--> Read
+7.  Select--> Read
+8.  Click on--> Resources 
+9.  [Resources]--> Select All Resources
+10. Click on--> Next Tag
+11. Click on--> Next Review
+12. Click on--> Next Tag
+13. [Review policy]--> Enter Policy Nmae
+14. Click on--> Create Policy
+
+
+
+
+
+----------------------------------------------------------------------------
+
+1. Click on --> User Group
+2. Click on --> Create Group
+3. Select--> Your Group
+4. Select--> Your policies
+5. Click on --> Create Group
+6. Click on --> Your Group
+7. Click on --> User Name
+8. Select--> Your Policy Name
+9. Click on--> Create Policy
+
+
+

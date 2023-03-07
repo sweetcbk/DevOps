@@ -1,0 +1,117 @@
+
+-------------------------------------------------------------------------------
+        1.  Create  VPC  Virtual Private Cloud
+-------------------------------------------------------------------------------
+Search VPC in serch box
+
+         or
+
+1. Go to--> Services
+2. Go t0--> Network & content delivery
+3. Select--> VPC
+4. Go to--> VPCS
+5. Select--> Create VPC
+6. [VPC settings]--> Select VPC only
+7. [VPC settings]--> Enter VPC Name
+8. [VPC settings]--> Go to IPv4 CIDR
+9. [IPv4 CIDR block]--> Select IPv4 CIDR manual input
+10.[IPv4 CIDR]--> Enter IP 
+                  (eg:-192.168.0.0/16)
+11.[IPv6 CIDR block]--> Select No IPv6 CIDR block
+12.[Tenancy]--> set Default
+13. Click on Create VPC
+14. 
+
+-----------------------------------------------------------------------------
+         2.      Create Subnet
+-----------------------------------------------------------------------------
+1. Click on--> Create subnet
+2. Select--> VPC id
+3.[Subnet settings]--> Enter Subnet name
+4.[Availability Zone]--> Select Zone
+                          (eg:-Asia pacific Mumbai)
+5.[IPv4 CIDR block]--> Enter Subnet IP
+                       (eg:-192.168.0.0/24)
+6. Click o-->> Create Subnet
+
+
+
+-----------------------------------------------------------------------------
+        3.   Create Internet Gatway
+-----------------------------------------------------------------------------
+1. Click on--> Create Internet Gatway
+2. [Internet gateway settings]--> Enter Gatway name
+3. Click on-->  Action
+4. Click on--> Attach to vpc
+5. Choose---> your VPC
+6. Click on--> Attach internet gateway
+
+
+
+
+--------------------------------------------------------------------------------------
+        Create Root Table
+--------------------------------------------------------------------------------------
+
+
+Go to--> Select Route Table 
+Go to--> Edit Rule/Route
+Click on--> Add Route
+            0.0.0.0/0
+Click on--> Target
+            Select Internet gatway
+            Select VPS
+Click on--> Save Changes
+Click on--> Go 1 Step back
+Click on--> Subnet Association
+Click on--> Edit Subnet Association
+Click on--> Select Subnet 
+Click on--> Save Association
+
+
+-----------------------------------------------------------------------------
+             Create Instance
+-----------------------------------------------------------------------------
+1. Go to Services
+
+2. Select -> Compute
+3. Select -> EC2 (vertual service in the cloud)
+
+           OR
+4. serch EC2 in search box and select 
+
+5. Select -> instances 
+6. Select -> Launch instances
+    1.[name and tag]--> Enter your instance name
+    2.[Application and OS Images]--> Instance type (choose Free tier eligible)
+    3.[Quick Start]--> Choose Operating Sysytem ISO
+    4.[Key pair (login)]--> Create new key pair 
+            1.[Key pair (login)]--> Enter Key pair name 
+            2.[Key pair type] --> RSA
+            3.[Private key file format] -->> .pem (For use with OpenSSH)-(Linux MACHINE)
+            4.[Private key file format] -->> .ppk (For use with PuTTY)-(WINDOWS MACHINE)
+            5. Click key pair
+7. Go to--> Network setting
+8. Go to--> Edit
+9. Select--> New VPC
+10. Select--> New Subnet
+11. Select--> Security rule
+12. Choose--> Type SSH
+13. Choose--> Source Type Anyware
+14. Click on--> Launch Instance
+ 
+ Go to--> SSH & Connect via SSH URL
+         (eg:-ssh -i "myaws.pem" ec2-user@13.127.202.220)
+
+
+
+
+
+
+
+ 
+
+
+
+
+

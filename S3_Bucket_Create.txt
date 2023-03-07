@@ -1,0 +1,75 @@
+---------------------------------------------------------------------------
+               Simple Storage Service 
+---------------------------------------------------------------------------
+
+
+Search S3 in Search box
+
+	or
+
+1.  Go to--> Services
+2.  Go to--> Storage
+3.  Go to--> Select S3
+4.  Click on--> Create Bucket
+5.  [General configuration]--> Enter Bucket Nmae (case sensetive without space)
+6.  [General configuration]--> Choose AWS Region (Asia Pacafic-Mumbai)
+7.  [General configuration]--> Choose Bucket (if Already Created Bucket)
+8.  [Object Ownership]--> Choose ACLs Disabled
+    [Object Ownership]--> Choose ACLs Enable (if access Multiple Users same Bucket)
+9.  [Block Public Access settings]--> Uncheck (Block all public access)
+    [Block Public Access settings]--> Select (I Acknowledge that)
+10. [Bucket Versioning]--> Select Disable
+11. [Default encryption]--> Select Disable
+12. Click on--> Create Bucket
+    Click on--> View Storage Lens Dashboard
+    Click on--> Select Bucket
+    Click on--> Create Folder
+    Enter-->  Folder Name
+    Click on--> Create Folder
+13. Click on--> Upload File/ Folder
+14. Click on--> Goto Properties
+    Go to--> Static website hosting
+    Click on--> Enable (Static website hosting)
+    Click on--> Save Changes
+    
+    Click on--> Edit static website hosting
+    [Static website hosting]--> Enable
+    [Hosting type]--> Host a static website
+    
+    Index document--> Enter ( index.html)
+    Error document--> Enter (error.html)
+    Click on--> Save Changes
+
+    Go to--> Permission 
+    Go to--> Bucket policy
+    Click on--> Edit
+    Click on--> Add new Statement
+                
+    -------------------------------------------------------------
+            eg:- {
+	            "Version": "2012-10-17",
+	            "Statement": [
+		         {
+			     "Sid": "Static Website",
+			     "Principal": "*",
+			     "Effect": "Allow",
+			     "Action":"S3:*",
+			    "Resource": "arn:aws:s3:::sweetcbk/*"
+		          }
+	              ]
+                   }
+     ---------------------------------------------------------------
+
+     Click on--> Save Changes
+     Go to--> Bucket
+     Click on--> index.html 
+     Click on--> Copy S3 Object URL
+               
+               eg:- https://sweetcbk.s3.ap-south-1.amazonaws.com/index.html
+     
+     Open Web Browser
+     Pest Object URL in URL Box and Enter 
+     
+     
+     
+
