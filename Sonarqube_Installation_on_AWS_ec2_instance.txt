@@ -1,0 +1,90 @@
+******************************************************
+Sonarqube Installation on Amazon Linux (ec2 instance)
+******************************************************
+
+Pre-requisites
+---------------
+ A small-scale (individual or small team) instance of the SonarQube server requires at least 2 GB of RAM to run efficiently and 1 GB of free RAM for the OS.
+
+	-> Use t2.medium 
+
+Start the amazon linux instance
+-------------------------------- 
+
+# free -h          -> To see the storage
+
+# sudo amazon-linux-extras install epel -y					Command similar to # sudo yum install epel-release -y
+
+# sudo amazon-linux-extras install java-openjdk11 -y
+
+# java -version
+
+
+Login as Root
+-------------
+
+# sudo su -
+
+# cd /opt
+
+	-> Note : By Default in amazon linux machine wget and unzip are installed, if not installed use this command.
+
+# yum install wget unzip -y
+
+	-> Open Sonarqube official website and copy the Download link.
+
+# wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+
+# unzip sonarqube-8.9.10.61524.zip
+
+# ll
+
+Note: -> As a good security practices, sonarqube is not advised to run sonar server as a root user. So create a new user call sonar and grant sudo access to manage sonar service as follows:
+
+# useradd sonar
+
+Open sudoers file 
+
+# visudo
+
+root ALL=(ALL)	ALL
+add this line: sonar ALL=(ALL)	ALL
+
+If you don't want to give password use this command: 
+
+sonar ALL=(ALL)	NOPASSWD:ALL
+
+
+# chown -R sonar:sonar /opt/sonarqube-8.9.10.61524
+
+# chmod -R 775 /opt/sonarqube-8.9.10.61524 		-> chmod to change permissions
+
+# ll
+
+# su sonar -  or su - sonar
+
+# pwd
+
+# cd /opt/sonarqube-8.9.10.61524
+
+# ll
+
+# cd bin
+
+# ll
+
+# cd linux-x86-64
+
+# ll
+
+# ./sonar.sh start
+
+# ./sonar.sh status
+
+Open browser   (Note : Add Custom TCP port 9000 in Security Group of ec2 instance) 
+----------------------------------------------------------------------------------
+
+http://<Public IP>:9000
+
+Username : admin
+Password : admin
